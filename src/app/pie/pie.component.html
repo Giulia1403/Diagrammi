@@ -1,0 +1,35 @@
+<div class="dropdownChart">
+  <span>Diagrammi</span>
+  <div class="dropdownChartContent">
+    <div class="routes">
+      <button routerLink="/bar">Diagramma a barre</button>
+      <button routerLink="/radar">Diagramma a radar</button>
+      <button routerLink="/line">Diagramma temporale</button>
+    </div>
+  </div>
+</div>
+
+<div class="dropdownOption">
+  <span>Opzioni</span>
+  <div class="dropdownOptionContent">
+    <button (click)="getAll()">Mostra tutti i dati</button>
+    <button (click)="getData(0)">Primo periodo</button>
+    <button (click)="getData(1)">Secondo periodo</button>
+    <button (click)="getData(2)">Terzo periodo</button>
+  </div>
+</div>
+
+<div>
+  <canvas baseChart
+          [data]="pieChartData"
+          [labels]="pieChartLabels"
+          [chartType]="pieChartType"
+          [options]="pieChartOptions"
+          [plugins]="pieChartPlugins"
+          [legend]="pieChartLegend"
+          [colors]="pieChartColor"
+          [height]="700"
+          [width]="1400"
+  ></canvas>
+</div>
+<button (click)="goBack()">Indietro</button>

@@ -1,0 +1,35 @@
+<div class="dropdownChart">
+  <span>Diagrammi</span>
+  <div class="dropdownChartContent">
+    <div class="routes">
+      <button routerLink="/line">Diagramma temporale</button>
+      <button routerLink="/radar">Diagramma a radar</button>
+      <button routerLink="/pie">Diagramma a torta</button>
+      <br>
+    </div>
+  </div>
+</div>
+
+<div class="dropdownOption">
+  <span>Opzioni</span>
+  <div class="dropdownOptionContent">
+    <button (click)="getData()">Mostra tutti i dati</button>
+    <button (click)="getDato(1)">Secondo</button>
+    <button (click)="getDato(0)">Primo</button>
+    <button (click)="getDato(2)">Terzo</button>
+  </div>
+</div>
+<div>
+  <canvas baseChart
+          [options]="barChartOptions"
+          [plugins]="barChartPlugins"
+          [chartType]="barChartType"
+          [datasets]="barChartData"
+          [labels]="barChartLabels"
+          [legend]="barChartLegend"
+          [colors]="barChartColor"
+          [height]="700"
+          [width]="1400">
+  </canvas>
+</div>
+<button (click)="goBack()">Indietro</button>

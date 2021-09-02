@@ -1,0 +1,113 @@
+button {
+  background-color: white;
+  margin: 5px 5px 5px 5px;
+  border-style: outset;
+  border-radius: 5px;
+}
+
+canvas {
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-duration: 5s;
+  animation-name: chart;
+  position: relative;
+  display: block;
+  margin: auto;
+  width: 80%
+}
+
+
+@keyframes chart {
+  0% {
+    border: solid 5px;
+    border-color: darkred darkblue darkgreen darkgoldenrod
+  }
+  25% {
+    border: solid 5px;
+    border-color: darkgoldenrod darkred darkblue darkgreen
+  }
+  50% {
+    border: solid 5px;
+    border-color: darkgreen darkgoldenrod darkred darkblue
+  }
+  75% {
+    border: solid 5px;
+    border-color: darkblue darkgreen darkgoldenrod darkred
+  }
+  100% {
+    border: solid 5px;
+    border-color: darkred darkblue darkgreen darkgoldenrod
+  }
+}
+
+/*-----Chart-----*/
+
+.dropdownChart {
+  background-color: deepskyblue;
+  border: 1px black solid;
+  display: inline-block;
+  position: relative;
+  margin-left: 10px;
+  cursor: default;
+  padding: 10px;
+}
+
+.dropdownChartContent {
+  background-color: darkslateblue;
+  border: 5px darkblue outset;
+  position: absolute;
+  text-align: left;
+  margin-top: 10px;
+  display: none;
+  width: 150px;
+  z-index: 1;
+}
+
+.dropdownChart:hover .dropdownChartContent {
+  display: block;
+  left: auto;
+}
+
+.dropdownChartContent button:hover {
+  cursor: pointer;
+}
+
+.dropdownChart:hover {
+  background-color: #0099cc;
+}
+
+/*-----Option-----*/
+
+.dropdownOption {
+  background-color: deepskyblue;
+  border: 1px black solid;
+  display: inline-block;
+  position: relative;
+  margin-left: 10px;
+  cursor: default;
+  padding: 10px;
+}
+
+.dropdownOptionContent {
+  background-color: darkslateblue;
+  border: 5px darkblue outset;
+  position: absolute;
+  margin-top: 10px;
+  text-align: left;
+  display: none;
+  width: 150px;
+  z-index: 1;
+}
+
+.dropdownOption:hover .dropdownOptionContent {
+  display: block;
+  left: auto;
+}
+
+.dropdownOptionContent button:hover {
+  cursor: pointer;
+}
+
+.dropdownOption:hover {
+  background-color: #0099cc;
+}

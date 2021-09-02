@@ -1,0 +1,32 @@
+<div class="dropdownChart">
+  <span>Diagrammi</span>
+  <div class="dropdownChartContent">
+    <div class="routes">
+      <button routerLink="/pie">Diagramma a torta</button>
+      <button routerLink="/bar">Diagramma a barre</button>
+      <button routerLink="/line">Diagramma temporale</button>
+    </div>
+  </div>
+</div>
+
+<div class="dropdownOption">
+  <span>Opzioni</span>
+  <div class="dropdownOptionContent">
+    <button (click)="getData()">Mostra tutti i dati</button>
+    <button (click)="getDato(0)">Primo</button>
+    <button (click)="getDato(1)">Secondo</button>
+    <button (click)="getDato(2)">Terzo</button>
+  </div>
+</div>
+
+<div>
+  <canvas baseChart
+          [datasets]="radarChartData"
+          [options]="radarChartOptions"
+          [labels]="radarChartLabels"
+          [chartType]="radarChartType"
+          [height]="700"
+          [width]="1400">
+  </canvas>
+</div>
+<button (click)="goBack()">Indietro</button>
